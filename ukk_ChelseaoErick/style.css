@@ -1,0 +1,42 @@
+.slider-wrapper{
+    position: relative;
+    height: 250px;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.slider-track{
+    display: flex;
+    width: calc(250*6);
+    animation: slidescroll 10s linear infinite;
+}
+
+@keyframes slidescroll{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px*1));
+    }
+}
+
+.slide{
+    width: 250px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    overflow: hidden;
+    perspective: 100px;
+    cursor: pointer;
+}
+
+.slide img{
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+
+}
